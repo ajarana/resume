@@ -1,0 +1,57 @@
+body {
+    font-family: 'Arimo', sans-serif;
+}
+
+main {
+    width: 672px;
+    margin: 0 auto;
+
+    h1 {
+        text-align: center;
+    }
+
+    .contact-information {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        justify-content: center;
+
+        li {
+            margin-right: 1em;
+        }
+    }
+
+    .flexSection {
+        display: flex;
+
+        h3, p {
+            margin: 10px 0;
+        }
+
+        h3 {
+            flex: 0.4;
+        }
+
+        p {
+            flex: 1;
+        }
+
+        &:first-of-type {
+            p, h3 {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .flexSeparated {
+        display: flex;
+
+        *:first-child {
+            margin-right: auto;
+        }
+
+        *:nth-child(2) {
+            font-style: oblique;
+        }
+    }
+}
