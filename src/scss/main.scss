@@ -1,45 +1,143 @@
+html {
+    font-size: 11pt;
+}
+
 body {
     font-family: 'Arimo', sans-serif;
+    color: #222;
 }
+
+#root {
+    padding: 72px 0;
+}
+
+$primary-red: #d32f2f;
+$primary-gray: #ddd;
 
 main {
     width: 672px;
     margin: 0 auto;
 
-    h1 {
-        text-align: center;
+    h1, h2, h3, h4, h5, h6, p, ul {
+        line-height: 1;
+        margin: 0;
     }
 
-    .contact-information {
-        display: flex;
-        list-style: none;
-        padding: 0;
-        justify-content: center;
+    h1 {
+        font-size: 1.85em;
+        text-align: center;
+        line-height: 0.8;
+    }
 
-        li {
-            margin-right: 1em;
+    h2 {
+        font-size: 1.35em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+        margin-bottom: 8px;
+    }
+
+    h4 {
+        font-size: 1em;
+    }
+
+    header {
+        margin-bottom: 45px;
+        color: #666;
+
+        h1 {
+            color: #333;
+            margin-bottom: 1.5rem;
         }
+
+        .contact-information {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            justify-content: center;
+            font-size: 14px;
+            color: #666;
+    
+            li {
+                display: flex;
+                align-items: center;
+            }
+    
+            li:not(:last-child) {
+                margin-right: 3em;
+            }
+        }
+    }
+
+    .resumeSection {
+        h2 {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            color: $primary-red;
+
+            &:after {
+                content: '';
+                flex: 1;
+                height: 1px;
+                display: block;
+                background: #dfdfdf;
+                border-radius: 100%;
+                margin-left: 16px;
+            }
+        }
+    }
+
+    .separator {
+        width: 95%;
+        height: 1px;
+        margin: 1.5em auto;
     }
 
     .flexSection {
         display: flex;
 
-        h3, p {
+        h3, ul {
             margin: 10px 0;
         }
 
-        h3 {
-            flex: 0.4;
+        > *:first-child {
+            flex: 1;
+            margin: 0;
         }
 
-        p {
-            flex: 1;
+        > div {
+            flex: 4;
+
+            span {
+                display: inline-flex;
+                align-items: center;
+
+                &:not(:first-child):before {
+                    content: "";
+                    display: inline-block;
+                    height: 8px;
+                    width: 1px;
+                    background-color: #ccc;
+                    margin: 0 6px;
+                }
+            }
+        }
+
+        .skillList {
+            display: flex;
+            align-items: center;
         }
 
         &:first-of-type {
-            p, h3 {
+            ul, h3 {
                 margin-top: 0;
             }
+        }
+
+        &:not(:first-child) {
+            margin-top: 8px;
         }
     }
 
@@ -52,6 +150,78 @@ main {
 
         *:nth-child(2) {
             font-style: oblique;
+            color: #666;
         }
+    }
+
+    .flexCentered {
+        position: relative;
+
+        > *:last-child {
+           position: absolute;
+           height: 100%;
+           right: 0;
+           bottom: 4px;
+           display: flex;
+           align-items: flex-end;
+           font-size: 11pt;
+        }
+    }
+
+    .subSection {
+        ul {
+            list-style: none;
+            line-height: 1.2;
+
+            li {
+                position: relative;
+
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    width: 4px;
+                    height: 4px;
+                    border-radius: 100%;
+                    background-color: #aaa;
+                    position: absolute;
+                    top: 6px;
+                    left: -12px;
+                }
+
+                &:not(:first-child) {
+                    margin: 8px 0;
+                }
+            }
+        }
+
+        &:not(:first-child) {
+            margin-top: 24px;
+        }
+
+        &:first-of-type {
+            margin-top: 14px;
+        }
+
+        h4 {
+            margin: 0 0 8px;
+        }
+    }
+
+    .fas, .fab {
+        margin-right: 6px;
+    }
+
+    .fa-envelope {
+        height: 12px;
+    }
+
+    .fa-github {
+        height: 12px;
+    }
+}
+
+#workSection {
+    h4 {
+        font-weight: normal;
     }
 }

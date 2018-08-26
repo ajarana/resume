@@ -1,31 +1,137 @@
+html {
+  font-size: 11pt; }
+
 body {
-  font-family: 'Arimo', sans-serif; }
+  font-family: 'Arimo', sans-serif;
+  color: #222; }
+
+#root {
+  padding: 72px 0; }
 
 main {
   width: 672px;
   margin: 0 auto; }
+  main h1, main h2, main h3, main h4, main h5, main h6, main p, main ul {
+    line-height: 1;
+    margin: 0; }
   main h1 {
-    text-align: center; }
-  main .contact-information {
+    font-size: 1.85em;
+    text-align: center;
+    line-height: 0.8; }
+  main h2 {
+    font-size: 1.35em; }
+  main h3 {
+    font-size: 1.2em;
+    margin-bottom: 8px; }
+  main h4 {
+    font-size: 1em; }
+  main header {
+    margin-bottom: 45px;
+    color: #666; }
+    main header h1 {
+      color: #333;
+      margin-bottom: 1.5rem; }
+    main header .contact-information {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      justify-content: center;
+      font-size: 14px;
+      color: #666; }
+      main header .contact-information li {
+        display: flex;
+        align-items: center; }
+      main header .contact-information li:not(:last-child) {
+        margin-right: 3em; }
+  main .resumeSection h2 {
     display: flex;
-    list-style: none;
-    padding: 0;
-    justify-content: center; }
-    main .contact-information li {
-      margin-right: 1em; }
+    flex-wrap: nowrap;
+    align-items: center;
+    color: #d32f2f; }
+    main .resumeSection h2:after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      display: block;
+      background: #dfdfdf;
+      border-radius: 100%;
+      margin-left: 16px; }
+  main .separator {
+    width: 95%;
+    height: 1px;
+    margin: 1.5em auto; }
   main .flexSection {
     display: flex; }
-    main .flexSection h3, main .flexSection p {
+    main .flexSection h3, main .flexSection ul {
       margin: 10px 0; }
-    main .flexSection h3 {
-      flex: 0.4; }
-    main .flexSection p {
-      flex: 1; }
-    main .flexSection:first-of-type p, main .flexSection:first-of-type h3 {
+    main .flexSection > *:first-child {
+      flex: 1;
+      margin: 0; }
+    main .flexSection > div {
+      flex: 4; }
+      main .flexSection > div span {
+        display: inline-flex;
+        align-items: center; }
+        main .flexSection > div span:not(:first-child):before {
+          content: "";
+          display: inline-block;
+          height: 8px;
+          width: 1px;
+          background-color: #ccc;
+          margin: 0 6px; }
+    main .flexSection .skillList {
+      display: flex;
+      align-items: center; }
+    main .flexSection:first-of-type ul, main .flexSection:first-of-type h3 {
       margin-top: 0; }
+    main .flexSection:not(:first-child) {
+      margin-top: 8px; }
   main .flexSeparated {
     display: flex; }
     main .flexSeparated *:first-child {
       margin-right: auto; }
     main .flexSeparated *:nth-child(2) {
-      font-style: oblique; }
+      font-style: oblique;
+      color: #666; }
+  main .flexCentered {
+    position: relative; }
+    main .flexCentered > *:last-child {
+      position: absolute;
+      height: 100%;
+      right: 0;
+      bottom: 4px;
+      display: flex;
+      align-items: flex-end;
+      font-size: 11pt; }
+  main .subSection ul {
+    list-style: none;
+    line-height: 1.2; }
+    main .subSection ul li {
+      position: relative; }
+      main .subSection ul li:before {
+        content: '';
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        border-radius: 100%;
+        background-color: #aaa;
+        position: absolute;
+        top: 6px;
+        left: -12px; }
+      main .subSection ul li:not(:first-child) {
+        margin: 8px 0; }
+  main .subSection:not(:first-child) {
+    margin-top: 24px; }
+  main .subSection:first-of-type {
+    margin-top: 14px; }
+  main .subSection h4 {
+    margin: 0 0 8px; }
+  main .fas, main .fab {
+    margin-right: 6px; }
+  main .fa-envelope {
+    height: 12px; }
+  main .fa-github {
+    height: 12px; }
+
+#workSection h4 {
+  font-weight: normal; }

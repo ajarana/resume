@@ -5,156 +5,157 @@ class App extends Component {
   render() {
     return (
       <main>
-        <h1>Andres Arana</h1>
-        <div>
-          <i class="fas fa-laptop-code"></i>
-          ajarana.github.io
-        </div>
+        <header>
+          <h1>Andres Arana</h1>
 
-        <ul className="contact-information">
-          <li>
-            <i class="fas fa-map-marker-alt"></i>
-            Ashburn, VA
-          </li>
-          <li>
-            <i class="fas fa-envelope"></i>
-            ajoelarana@gmail.com
-          </li>
-          <li>
-            <i class="fas fa-mobile-alt"></i>
-            (703) 434-0219 
-          </li>
-          <li>
-            <i class="fab fa-github"></i>
-            github.com/ajarana
-          </li>
-        </ul>  
+          <ul className="contact-information">
+            <li>
+              <i className="fas fa-map-marker-alt"></i>
+              <span>Ashburn, VA</span>
+            </li>
+            <li>
+              <i className="fas fa-envelope"></i>
+              <span>ajoelarana@gmail.com</span>
+            </li>
+            <li>
+              <i className="fas fa-mobile-alt"></i>
+              <span>703-434-0219</span> 
+            </li>
+            <li>
+                <i className="fas fa-laptop-code"></i>
+                <span>ajarana.github.io</span>
+            </li>
+          </ul>   
+        </header>
 
-        <section>
+        <section id="skillSection" className="resumeSection">
           <h2>Skills</h2>
 
-          <section className="flexSection">
-            <h3 className="secondaryHeader">Front-End Tools</h3>
+          <section className="subSection">
+            <section className="flexSection">
+              <h4 className="secondaryHeader">Front-End</h4>
 
-            <ul>
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>LESS</li>
-              <li>Sass</li>
-              <li>JavaScript (ES5/ES6)</li>
-              <li>Node/npm</li>
-              <li>React</li>
-              <li>Bootstrap</li>
-              <li>Foundation</li>
-              <li>CesiumJS</li>
-              <li>Vis.js</li>
-              <li>Font Awesome 5</li>
-            </ul>
+              <div>
+                <div className="skillList">
+                  <span>JavaScript</span><span>React</span><span>Node</span><span>npm</span><span>CesiumJS</span><span>Vis.js</span><span>HTML5</span><span>CSS3</span><span>Sass</span>
+                </div>
+                <div className="skillList">
+                  <span>LESS</span><span>Bootstrap</span><span>Foundation</span><span>Font Awesome</span><span>Mobile-First Responsive Design</span>
+                </div>
+              </div>
+            </section>
+
+            <section className="flexSection">
+              <h4 className="secondaryHeader">Software</h4>
+
+              <div className="skillList">
+                <span>Ubuntu</span><span>macOS</span><span>Git</span><span>VS Code</span><span>Atom</span>
+              </div>
+            </section>
+              
+            <section className="flexSection">
+              <h4 className="secondaryHeader">Languages</h4>
+
+              <div className="skillList">
+                <span>English</span><span>Spanish</span>
+              </div>
+            </section>
           </section>
           
-          <section className="flexSection">
-            <h3 className="secondaryHeader">Visual Design</h3>
-
-            <ul>
-              <li>Mobile-First Design</li>
-              <li>Grid-Based Layouts</li>
-            </ul>
-          </section>
-
-          <section className="flexSection">
-            <h3 className="secondaryHeader">Software</h3>
-
-            <ul>
-              <li>Git</li>
-              <li>Ubuntu/macOS</li>
-              <li>VS Code</li>
-              <li>Atom</li>
-            </ul>
-          </section>
-            
-          <section className="flexSection">
-            <h3 className="secondaryHeader">Languages</h3>
-            <p>
-              English | Spanish
-            </p>
-          </section>
         </section>
 
-        <section>
-          <h2>Education</h2> 
-            <section className="flexSeparated">
-              <h4>College of William & Mary</h4>
-              <p>Williamsburg, VA</p>
-            </section>
-          <p>
-            Bachelor of Science in Chemistry, May 2016
-          </p>
-        </section>
+        <div className="separator"></div>
 
-        <section>
+        <section id="workSection" className="resumeSection">
           <h2>Work Experience</h2>
 
-          <section>
+          <section className="subSection">
             <section className="flexSeparated">
-              <h3 className="secondaryHeader">Pragmatics</h3> 
+              <h3 className="secondaryHeader">UI Developer</h3> 
               <p>
                 September 2017 - present
               </p>
             </section>
 
-            <h4>
-              UI Developer
-            </h4>
+            <h4>Pragmatics</h4>
 
             <ul>
               <li>
-                Code responsive interfaces that present large data sets to users using Cesium, React, Vis.js, and other open-source front-end tools
+                Developed responsive interfaces to present large data sets using Cesium, React, Vis.js, and other open source front-end tools
               </li>
               <li>
-                Design web applications with data accessibility in mind through mobile-first design and cross-browser compatible code. 
+                Designed web applications, websites, and prototypes using mobile-first design principles
               </li>
               <li>
-                Coordinate with backend developers and architects in order to build robust and functional applications
+                Coordinated with backend developers and architects in order to build functional applications
               </li>
               <li>
-                Integrate feedback from both the team and customer in order to ensure the product meets user goals
+                Integrated feedback from the team and customer in order to improve the existing product
               </li>
               <li>
-                Interview new team members and train them in the latest front-end web technologies
+                Interviewed new team members and trained them in the necessary front-end web technologies
               </li>
             </ul>
           </section>
 
-          <section className="flexSeparated">
-            <h3 className="secondaryHeader">Freelance</h3>
-            <p>October 2016 - Present</p>
+          <section className="subSection">
+            <section className="flexSeparated">
+              <h3 className="secondaryHeader">Web Developer</h3>
+              <p>October 2016 - present</p>
+            </section>
+            
+            <h4>Freelance</h4>
+
+            <ul>
+              <li>
+                Built a secure contact form for a children’s mental health practice
+              </li>
+              <li>
+                Successfully migrated a public-facing client website
+              </li>
+              <li>
+                Continuously perform content updates
+              </li>
+            </ul>
           </section>
-          
-          <h4>UI Developer</h4>
 
-          <ul>
-            <li>
-              Built a secure contact form for a children’s mental health practice
-            </li>
-            <li>
-              Successfully migrated a public-facing client website
-            </li>
-            <li>
-              Continuously perform content updates
-            </li>
-          </ul>
+        </section>
 
-          <h3 className="secondaryHeader">Personal Projects</h3>
+        <div className="separator"></div>
 
-          <h4>ajarana.github.io</h4>
-          <ul>
-            <li>
-              Portfolio website built and designed from scratch
-            </li>
-            <li>
-              Hosts my personal projects including a news feed, memory game, and bootstrap website
-            </li>
-          </ul>
+        <section className="resumeSection">
+          <h2>Personal Projects</h2> 
+
+          <section className="subSection">
+            <section className="flexSeparated">
+                <h3>ajarana.github.io</h3>
+                <p>December 2016 - present</p>
+           </section>
+            <ul>
+              <li>
+                Portfolio website built and designed from scratch
+              </li>
+              <li>
+                Hosts my personal projects including a news feed, memory game, and bootstrap website
+              </li>
+            </ul>
+          </section>
+        
+        </section>
+
+        <div className="separator"></div>
+
+        <section className="resumeSection">
+          <h2>Education</h2> 
+
+          <section className="subSection">
+            <section className="flexSeparated">
+              <h3>Bachelor of Science in Chemistry</h3>
+              <p>August 2012 - May 2016</p>
+            </section>
+
+            <p>College of William &amp; Mary</p>
+          </section>
         </section>
 
       </main>
